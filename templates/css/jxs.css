@@ -208,3 +208,12 @@
 .m-footer-bar a{
     color: #333;
 }
+.show {
+	display: block !important;
+}
+.hidden {
+	display: none !important;
+}
+.invisible {
+	visibility: hidden;
+}
