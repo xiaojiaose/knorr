@@ -1,2 +1,5 @@
 # to save space in git repo
-/config.php
+/include/config.php
+.DS_Store
+Thumbs.db
+.idea/
