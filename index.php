@@ -1,6 +1,5 @@
 <?php
-
-define('IN_HEMA', TRUE);
+define('IN_HEMA', true);
 define('HEMA_ROOT', dirname(__FILE__));
 define('MAGIC_QUOTES_GPC', get_magic_quotes_gpc());
 date_default_timezone_set('PRC');
@@ -18,12 +17,14 @@ require_once HEMA_ROOT . '/include/config.inc.php';
 require_once HEMA_ROOT . '/include/db_mysql.class.php';
 
 $datetime = time();
-
 $back_url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-//var_dump($back_url);
 $db = new DBPDO();
-
-include_once HEMA_ROOT . '/templates'.$_SERVER['REQUEST_URI'].'.php';
+if ($_SERVER['REQUEST_URI'] == '/') {
+    $go = '/index';
+} else {
+    $go = $_SERVER['REQUEST_URI'];
+}
+include_once HEMA_ROOT . '/templates' . $go . '.php';
 
 
 

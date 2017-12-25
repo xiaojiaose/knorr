@@ -8,22 +8,24 @@
 		<!--这个用来重置-->
 		<!--<link rel="stylesheet" type="text/css" href="css/reset.css"/>-->
 		<!--这个用来定义公用-->
-		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="/templates/css/public.css"/>
 		<!--这个是内容部分-->
-		<link rel="stylesheet" type="text/css" href="css/fwzx.css"/>
-		<title>服务咨询</title>
+		<link rel="stylesheet" type="text/css" href="/templates/css/qdjm.css"/>
+		<title>渠道加盟</title>
 	</head>
 <body>
 <header>
-	<h1><a href="#">克诺尔</a></h1>
-	<a href="#" class="logo" rel="nofollow">
-		<img src="images/icon1.png" onerror="this.onerror=null;this.src='../images/icon1.png'" id="loginSrc">
+	<h1><a href="/">克诺尔</a></h1>
+	<a href="/" class="logo" rel="nofollow">
+		<img src="/templates/images/icon1.png" onerror="this.onerror=null;this.src='/templates/images/icon1.png'" id="loginSrc">
 	</a>	
 </header>
 
 <div class="brand">
 	<div class="tab-title">
-		<span class="selected bluetom">我要联系</span>
+		<span class="selected"><a href="/jxs">经销商网点</a></span>
+		<em></em>		
+		<span class="selected bluetom">渠道加盟</span>
 		
 	</div>
 </div>
@@ -34,7 +36,9 @@
 <div class="mobile">
 	<!-- tab -->
 	<div class="qdjmbox">
-		
+		<div class="qdj_a">
+			<input type="text" class="text350" maxlength="40" name="product" id="product" placeholder="意向代理的产品">
+		</div>
 		<div class="qdj_b">
 			<input type="text" class="text350" maxlength="20" name="name" id="name" placeholder="姓名">
 		</div>
@@ -48,9 +52,6 @@
 					<li><input type="radio" value="2" name="t1" id="la2" class="input_typea1"/><label class="input_typeb1" for="la2">女士</label></li>
 				</ul> 
 			</div>
-		</div>
-		<div class="qdj_a" style="height: 128px; background: #ebebeb">
-            <textarea id="contentzx" name="contentzx" style="height: 128px" cols="" rows="" class="input_txt" placeholder="您想咨询的内容（5-100个字以内）" onkeyup="checkContentNum()"></textarea>
 		</div>
 		<div class="qdj_d">
 			<select name="city" id="city">
@@ -83,8 +84,8 @@
         <a href="#">Knorr-Bremse AG | www.knorr-bremse.com.cn</a>
     </p>
 </footer>
-<script src="js/jquery-min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script src="/templates/js/jquery-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/templates/js/index.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>
