@@ -1,0 +1,205 @@
+.brand {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #e3e3e3;
+}
+.brand .tab-title {
+    font-size: 14px;
+    padding: 0 16px;
+    height: 41px;
+    border-bottom: 1px solid #eee;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.brand .tab-title > span {
+    font-size: 16px;
+    color: #A1A9B3;
+    line-height: 40px;
+    height: 41px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    /*width: 39%;*/
+    margin: 0 0;
+}
+.brand .tab-title > span a{
+	color: #333;
+	display: block;
+	width: 100%;
+}
+.brand .tab-title .selected {
+    color: #003f82;
+}
+.brand .tab-title em{
+	width: 1px; height: 20px;
+	display: block;
+	overflow: hidden;
+	background: #e3e3e3;
+	margin-top: 10px;
+	float: left;
+}
+.brand .tabs-slider {
+    -webkit-transform: translate3d(15px,0,0);
+    transform: translate3d(15px,0,0);
+    position: absolute;
+    left: 0;
+    top: 41px;
+    z-index: 1;
+    height: 1px;
+    background-color: #003f82;
+    -webkit-transition: -webkit-transform .2s linear 0s;
+    transition: -webkit-transform .2s linear 0s;
+    transition: transform .2s linear 0s;
+    transition: transform .2s linear 0s, -webkit-transform .2s linear 0s;
+}
+.mobile {
+    display: block;
+    overflow: hidden;
+    min-height: 400px;
+    /*padding-bottom: 45px;*/
+    perspective: 1px; 
+    /*padding: 0; height: calc(100vh - 300px); overflow: auto;*/
+}
+
+
+.qdjmbox{
+	padding:30px 16px;
+	display: block;
+	overflow: hidden;
+}
+.qdj_c2{
+	float: left;
+	width: 75%;
+}
+.ops{
+	width: 80%;
+}
+.input_typeb1{
+	width: 100%;
+	display: block;
+	font-size: 14px;
+}
+.ops li{
+	float: left;
+	width: 50%;
+}
+.ops li input {
+    position: absolute;
+    left: -9999em;
+}
+.input_typeb1 {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background: url(../images/dui1.png) no-repeat 0px 15px;
+    background-size: 16px;
+    text-indent: 28px;
+    line-height: 44px;
+    cursor: pointer;
+    color: #333333;
+}
+.input_typea1:checked+.input_typeb1{
+	/*cursor:pointer;position:inherit; 
+	background: #E13335;
+	text-indent: 0px;
+	color: #fff;*/
+	position: inherit;
+    background: url(../images/dui.png) no-repeat 0px 15px;
+    background-size: 16px;
+    text-indent: 28px;
+	}
+
+.bluetom{
+	border-bottom: 1px solid #003f82;
+}
+.qdj_a,.qdj_b,.qdj_c,.qdj_d,.qdj_e,.qdj_f{
+	overflow: hidden;
+	display: block;
+	margin-bottom: 20px;
+}
+.text350{
+	background: none;
+	border: none;
+	background: #ebebeb;
+	float: left;
+    width: 100%;
+    height: 44px;
+    color: #333;
+    text-indent: 16px;
+    font-size: 14px;
+    line-height: 44px;
+}
+.input_txt{
+    background: none;
+    border: none;
+    padding: 16px;
+    width: 100%;
+}
+.qdj_c1{
+	float: left;
+	width: 25%;
+	text-indent: 16px;
+	color: #333;
+	font-size: 14px;
+	line-height: 44px;
+}
+.qdj_d{
+	width: 100%;
+    height: 44px;
+    position: relative;
+    background: #ebebeb;
+    /*float: left;*/
+    overflow: hidden;
+}
+.qdj_d select {
+    font-size: 14px;
+    width: 100%;
+    padding-left: 14px;
+    line-height: 44px;
+    height: 44px;
+    color: #333;
+}
+.qdj_d i {
+    background: url(../images/icon5.png) no-repeat center right;
+    background-size: 11px;
+    display: block;
+    width: 11px;
+    height: 7px;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+}
+.sub_tab {
+    overflow: hidden;
+    width: 100%;
+}
+.pcloginbtnbox {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+.pcloginbtnbox a {
+    height: 44px;
+    color: #fff;
+    text-align: center;
+    background: #003f82;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    line-height: 44px;
+}
+body{
+	background: url(../images/backimg.png) no-repeat center bottom;
+	background-size: contain;
+}
+.m-footer-bar{
+    color: #333;
+}
+.m-footer-bar .copyright{
+    color: #333;
+}
+.m-footer-bar a{
+    color: #333;
+}
+
