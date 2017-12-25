@@ -1,125 +1,109 @@
 <?php
 
-if(!defined('IN_HEMA')) {
-    exit('Access Denied');
-}
+//定义数据库信息
 
-class dbstuff {
+header("Content-type:text/html; charset=utf-8");
 
-    var $version = '';
-    var $querynum = 0;
-    var $link = null;
+define('DB_HOST', '127.0.0.1');
+define('DB_USER', 'root');
+define('DB_PWD', 'aiic0gbf');
+define('DB_NAME', 'knorr');
 
-    function connect($dbhost, $dbuser, $dbpw, $dbname = '', $pconnect = 0, $halt = TRUE, $dbcharset2 = '') {
+class DBPDO {
 
-        $func = empty($pconnect) ? 'mysql_connect' : 'mysql_pconnect';
-        if(!$this->link = @$func($dbhost, $dbuser, $dbpw, 1)) {
-            $halt && $this->halt('Can not connect to MySQL server');
-        } else {
-            if($this->version() > '4.1') {
-                global $charset, $dbcharset;
-                $dbcharset = $dbcharset2 ? $dbcharset2 : $dbcharset;
-                $dbcharset = !$dbcharset && in_array(strtolower($charset), array('gbk', 'big5', 'utf-8')) ? str_replace('-', '', $charset) : $dbcharset;
-                $serverset = $dbcharset ? 'character_set_connection='.$dbcharset.', character_set_results='.$dbcharset.', character_set_client=binary' : '';
-                $serverset .= $this->version() > '5.0.1' ? ((empty($serverset) ? '' : ',').'sql_mode=\'\'') : '';
-                $serverset && mysql_query("set names 'utf8'", $this->link);
-            }
-            $dbname && @mysql_select_db($dbname, $this->link);
+    private static $instance;
+    public $dsn;
+    public $dbuser;
+    public $dbpwd;
+    public $sth;
+    public $dbh;
+
+    //初始化
+    function __construct() {
+        $this->dsn = 'mysql:host='.DB_HOST.';dbname='.DB_NAME;
+        $this->dbuser = DB_USER;
+        $this->dbpwd = DB_PWD;
+        $this->connect();
+        $this->dbh->query("SET NAMES 'UTF8'");
+        $this->dbh->query("SET TIME_ZONE = '+8:00'");
+    }
+
+    //连接数据库
+    public function connect() {
+        try {
+            $this->dbh = new PDO($this->dsn, $this->dbuser, $this->dbpwd);
         }
-
-    }
-
-    function select_db($dbname) {
-        return mysql_select_db($dbname, $this->link);
-    }
-
-    function fetch_array($query, $result_type = MYSQL_ASSOC) {
-        return mysql_fetch_array($query, $result_type);
-    }
-
-    function fetch_first($sql) {
-        return $this->fetch_array($this->query($sql));
-    }
-
-    function result_first($sql) {
-        return $this->result($this->query($sql), 0);
-    }
-
-    function query($sql, $type = '') {
-
-        $func = 'mysql_query';
-
-        if(!($query = $func($sql, $this->link))) {
-            if(in_array($this->errno(), array(2006, 2013)) && substr($type, 0, 5) != 'RETRY') {
-                $this->close();
-                require HEMA_ROOT.'./include/config.inc.php';
-                $this->connect($dbhost, $dbuser, $dbpw, $dbname, $pconnect, true, $dbcharset);
-                $this->query($sql, 'RETRY'.$type);
-            } elseif($type != 'SILENT' && substr($type, 5) != 'SILENT') {
-                $this->halt('MySQL Query Error', $sql);
-            }
+        catch(PDOException $e) {
+            exit('连接失败:'.$e->getMessage());
         }
-
-        $this->querynum++;
-        return $query;
     }
 
-    function affected_rows() {
-        return mysql_affected_rows($this->link);
+    //获取表字段
+    public function getFields($table='vista_order') {
+        $this->sth = $this->dbh->query("DESCRIBE $table");
+        $this->getPDOError();
+        $this->sth->setFetchMode(PDO::FETCH_ASSOC);
+        $result = $this->sth->fetchAll();
+        $this->sth = null;
+        return $result;
     }
 
-    function error() {
-        return (($this->link) ? mysql_error($this->link) : mysql_error());
-    }
-
-    function errno() {
-        return intval(($this->link) ? mysql_errno($this->link) : mysql_errno());
-    }
-
-    function result($query, $row = 0) {
-        $query = @mysql_result($query, $row);
-        return $query;
-    }
-
-    function num_rows($query) {
-        $query = mysql_num_rows($query);
-        return $query;
-    }
-
-    function num_fields($query) {
-        return mysql_num_fields($query);
-    }
-
-    function free_result($query) {
-        return mysql_free_result($query);
-    }
-
-    function insert_id() {
-        return ($id = mysql_insert_id($this->link)) >= 0 ? $id : $this->result($this->query("SELECT last_insert_id()"), 0);
-    }
-
-    function fetch_row($query) {
-        $query = mysql_fetch_row($query);
-        return $query;
-    }
-
-    function fetch_fields($query) {
-        return mysql_fetch_field($query);
-    }
-
-    function version() {
-        if(empty($this->version)) {
-            $this->version = mysql_get_server_info($this->link);
+    //插入数据
+    public function insert($sql) {
+        if($this->dbh->exec($sql)) {
+            $this->getPDOError();
+            return $this->dbh->lastInsertId();
         }
-        return $this->version;
+        return false;
     }
 
-    function close() {
-        return mysql_close($this->link);
+    //删除数据
+    public function delete($sql) {
+        if(($rows = $this->dbh->exec($sql)) > 0) {
+            $this->getPDOError();
+            return $rows;
+        }
+        else {
+            return false;
+        }
     }
 
-    function halt($message = '', $sql = '') {
+    //更改数据
+    public function update($sql) {
+        if(($rows = $this->dbh->exec($sql)) > 0) {
+            $this->getPDOError();
+            return $rows;
+        }
+        return false;
+    }
+
+    //获取数据
+    public function select($sql) {
+        $this->sth = $this->dbh->query($sql);
+        $this->getPDOError();
+        $this->sth->setFetchMode(PDO::FETCH_ASSOC);
+        $result = $this->sth->fetchAll();
+        $this->sth = null;
+        return $result;
+    }
+
+    //获取数目
+    public function count($sql) {
+        $count = $this->dbh->query($sql);
+        $this->getPDOError();
+        return $count->fetchColumn();
+    }
+
+    //获取PDO错误信息
+    private function getPDOError() {
+        if($this->dbh->errorCode() != '00000') {
+            $error = $this->dbh->errorInfo();
+            exit($error[2]);
+        }
+    }
+
+    //关闭连接
+    public function __destruct() {
+        $this->dbh = null;
     }
 }
-
-?>
