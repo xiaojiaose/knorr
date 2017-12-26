@@ -95,8 +95,7 @@ $province_names = $db->select("select region_name from region where region_type 
     </p>
 </footer>
 <script src="/templates/js/jquery-min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/templates/
-js/index.js" type="text/javascript" charset="utf-8"></script>
+<script src="/templates/js/index.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>
