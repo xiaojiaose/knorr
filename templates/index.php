@@ -35,21 +35,13 @@
 	<div class="tabdiv">
 		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/cpcx" class="tabdiv1"><span>产品查询</span></a>
 		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/product" class="tabdiv2"><span>热销产品</span></a>
-		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/jieguo1" class="tabdiv3"><span>渠道加盟</span></a>
+		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/channel" class="tabdiv3"><span>渠道加盟</span></a>
 		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/jieguo3" class="tabdiv4"><span>在线培训</span></a>
-		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/fwzx" class="tabdiv5"><span>服务咨询</span></a>
+		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/consult" class="tabdiv5"><span>服务咨询</span></a>
 	</div>	
 </div>	
 <!--底部-->
-<footer class="m-footer-bar">
-	<p class="copyright">&copy;
-        <script>
-            document.write(new Date().getFullYear());
-        </script>
-        <a href="#">Knorr-Bremse AG | www.knorr-bremse.com.cn</a>
-    </p>
-</footer>
-<script src="/templates/js/jquery-min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/templates/js/index.js" type="text/javascript" charset="utf-8"></script>
-</body>
-</html>
+<?php
+include_once 'footer.html';
+?>
+

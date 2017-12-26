@@ -61,7 +61,7 @@ $province_names = $db->select("select region_name from region where region_type 
             <div class="qdj_c2">
                 <ul class="ops">
                     <li class="shright">
-                        <input type="radio" value="1" name="sex" id="la1" class="input_typea1"/><label
+                        <input type="radio" value="1" name="sex" checked id="la1" class="input_typea1"/><label
                                 class="input_typeb1" for="la1">先生</label>
                     </li>
                     <li>
@@ -98,16 +98,7 @@ $province_names = $db->select("select region_name from region where region_type 
 </div>
 </form>
 <!--底部-->
-<footer class="m-footer-bar">
-    <p class="copyright">&copy;
-        <script>
-            document.write(new Date().getFullYear());
-        </script>
-        <a href="#">Knorr-Bremse AG | www.knorr-bremse.com.cn</a>
-    </p>
-</footer>
-<script src="/templates/js/jquery-min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/templates/js/index.js" type="text/javascript" charset="utf-8"></script>
+<?php
+include_once 'footer.html';
+?>
 
-</body>
-</html>

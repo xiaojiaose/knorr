@@ -13,7 +13,6 @@ foreach (array('_COOKIE', '_POST', '_GET') as $_request) {
     }
 }
 
-require_once HEMA_ROOT . '/include/config.inc.php';
 require_once HEMA_ROOT . '/include/db_mysql.class.php';
 
 $datetime = time();
