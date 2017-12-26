@@ -22,6 +22,8 @@
     var point = new BMap.Point(<? echo $x; ?>, <? echo $y; ?>);
     // 初始化地图，设置中心点坐标和地图级别
     map.centerAndZoom(point, 15);
+    var marker = new BMap.Marker(point);        // 创建标注
+    map.addOverlay(marker);                     // 将标注添加到地图中
 </script>
 </body>
 </html>
