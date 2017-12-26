@@ -11,12 +11,12 @@
 	<link rel="stylesheet" type="text/css" href="/templates/css/public.css"/>
 	<!--这个是内容部分-->
 	<link rel="stylesheet" type="text/css" href="/templates/css/jieguo.css"/>
-	<title>欢迎加盟1</title>
+	<title>欢迎加盟</title>
 </head>
 <body>
 <header>
-	<h1><a href="#">克诺尔</a></h1>
-	<a href="#" class="logo" rel="nofollow">
+	<h1><a href="/">克诺尔</a></h1>
+	<a href="/" class="logo" rel="nofollow">
 		<img src="/templates/images/icon1.png" onerror="this.onerror=null;this.src='/templates/images/icon1.png'" id="loginSrc">
 	</a>
 </header>
@@ -39,7 +39,7 @@
 			欢迎加入克诺尔商用车系统<br>中国区经销商行列
 		</div>
 		<div class="krnon2">
-			<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/qdjm" class="confirm">确认</a>
+			<a href="/channel" class="confirm">确认</a>
 		</div>
 	</div>
 </div>

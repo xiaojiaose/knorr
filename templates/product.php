@@ -15,8 +15,8 @@
 	</head>
 <body>
 <header>
-	<h1><a href="#">克诺尔</a></h1>
-	<a href="#" class="logo" rel="nofollow">
+	<h1><a href="/">克诺尔</a></h1>
+	<a href="/" class="logo" rel="nofollow">
 		<img src="/templates/images/icon1.png" onerror="this.onerror=null;this.src='/templates/images/icon1.png'" id="loginSrc">
 	</a>	
 </header>
