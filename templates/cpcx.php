@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 	<head>
@@ -5,18 +6,18 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />			
 	<meta content="telephone=no" name="format-detection" />
 		<!--这个用来重置-->
-		<!--<link rel="stylesheet" type="text/css" href="/templates/css/reset.css"/>-->
+		<!--<link rel="stylesheet" type="text/css" href="css/reset.css"/>-->
 		<!--这个用来定义公用-->
 		<link rel="stylesheet" type="text/css" href="/templates/css/public.css"/>
 		<!--这个是内容部分-->
-		<link rel="stylesheet" type="text/css" href="/templates/css/index.css"/>
-		<title>售后首页</title>
+		<link rel="stylesheet" type="text/css" href="/templates/css/jieguo.css"/>
+		<title>产品查询</title>
 	</head>
 <body>
 <header>
-	<h1><a href="/">克诺尔</a></h1>
-	<a href="/" class="logo" rel="nofollow">
-		<img src="/templates/images/icon1.png" onerror="this.onerror=null;this.src='../images/icon1.png'" id="loginSrc">
+	<h1><a href="#">克诺尔</a></h1>
+	<a href="#" class="logo" rel="nofollow">
+		<img src="/templates/images/icon1.png" onerror="this.onerror=null;this.src='/templates/images/icon1.png'" id="loginSrc">
 	</a>	
 </header>
 
@@ -26,18 +27,16 @@
 	</div>
 </div>
 
-
-
-
 <div class="mobile">
-	<!-- tab -->
-	<div class="tabdiv">
-		<a href="#" class="tabdiv1"><span>产品查询</span></a>
-		<a href="#" class="tabdiv2"><span>热销产品</span></a>
-		<a href="channel" class="tabdiv3"><span>渠道加盟</span></a>
-		<a href="#" class="tabdiv4"><span>在线培训</span></a>
-		<a href="consult" class="tabdiv5"><span>服务咨询</span></a>
-	</div>	
+	<div class="kunonbox">
+		<div class="krnon5">
+			全新产品查询功能<br>即将开启
+		</div>
+		
+		<div class="krnon2">
+			<a href="/" class="confirm">确认</a>
+		</div>
+	</div>
 </div>	
 <!--底部-->
 <footer class="m-footer-bar">
@@ -50,5 +49,6 @@
 </footer>
 <script src="/templates/js/jquery-min.js" type="text/javascript" charset="utf-8"></script>
 <script src="/templates/js/index.js" type="text/javascript" charset="utf-8"></script>
+
 </body>
 </html>

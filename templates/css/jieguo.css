@@ -20,8 +20,8 @@
     font-weight: 700;
     text-align: center;
     display: block;
-    /*width: 39%;*/
-    margin: 0 0;
+    width: 39%;
+    margin: 0 5%;
 }
 .brand .tab-title > span a{
 	color: #333;
@@ -130,12 +130,7 @@
     font-size: 14px;
     line-height: 44px;
 }
-.input_txt{
-    background: none;
-    border: none;
-    padding: 16px;
-    width: 100%;
-}
+
 .qdj_c1{
 	float: left;
 	width: 25%;
@@ -155,7 +150,7 @@
 .qdj_d select {
     font-size: 14px;
     width: 100%;
-    padding-left: 14px;
+    padding-left: 16px;
     line-height: 44px;
     height: 44px;
     color: #333;
@@ -190,7 +185,7 @@
     line-height: 44px;
 }
 body{
-    background-image:  url(../images/backimg.png) ;
+    background-image:  url(../images/background2.png) ;
     background-size: contain;
     background-repeat:no-repeat;
     background-attachment:fixed;
@@ -205,4 +200,63 @@ body{
 .m-footer-bar a{
     color: #333;
 }
+.kunonbox{
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    padding: 95px 0px 0px;
+}
+.krnon1{
+    font-size: 21px;
+    text-align: center;
+    line-height: 30px;
+}
+.krnon2{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 30px;
+}
+.confirm{
+    width: 35%;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    background: #003f82;
+    margin:auto;
+}
+.krnon3{
+    color: #003f82;
+    text-align: center;
+    line-height: 30px;
+    font-size: 21px;
+}
+.krnon4{
+    color: #333;
+    padding-top: 20px;
+    text-align: center;
+    line-height: 21px;
+    font-size: 12px;
+}
+.krnon5{
+    width: 60%;
+    padding:20px 10px;
+    font-size: 21px;
+    background: #fcfdfd;
+    text-align: center;
+    margin:0 auto;
+}
+
+
+
+
+
+
+
+
+
 

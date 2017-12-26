@@ -6,7 +6,7 @@ header("Content-type:text/html; charset=utf-8");
 
 define('DB_HOST', '127.0.0.1');
 define('DB_USER', 'root');
-define('DB_PWD', '123456');
+define('DB_PWD', 'aiic0gbf');
 define('DB_NAME', 'knorr');
 
 class DBPDO {
