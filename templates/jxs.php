@@ -86,16 +86,10 @@
 	</div>
 </div>	
 <!--底部-->
-<footer class="m-footer-bar">
-	<p class="copyright">&copy;
-        <script>
-            document.write(new Date().getFullYear());
-        </script>
-        <a href="#">Knorr-Bremse AG | www.knorr-bremse.com.cn</a>
-    </p>
-</footer>
-<script src="/templates/js/jquery-min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/templates/js/index.js" type="text/javascript" charset="utf-8"></script>
+<?php
+include_once 'footer.html';
+?>
+
 <script>
 	$(document).ready(function () {
 	    // 根据选择显示经销商
@@ -117,6 +111,3 @@
 
 	});
 </script>
-</body>
-</html>
-

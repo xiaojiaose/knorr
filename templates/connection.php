@@ -166,13 +166,6 @@ $province_names = $db->select("select region_name from region where region_type 
 </script>
 <!--底部-->
 <!--底部-->
-<footer class="m-footer-bar">
-    <p class="copyright">&copy;
-        <script>
-            document.write(new Date().getFullYear());
-        </script>
-        <a href="#">Knorr-Bremse AG | www.knorr-bremse.com.cn</a>
-    </p>
-</footer>
-</body>
-</html>
+<?php
+include_once 'footer.html';
+?>
