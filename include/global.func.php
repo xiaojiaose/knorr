@@ -95,4 +95,21 @@ function cutstr($string, $length, $dot = ' ...') {
 
 	return $strcut . $dot;
 }
+
+if (! function_exists('dd')) {
+    /**
+     * Dump the passed variables and end the script.
+     *
+     * @param  mixed
+     * @return void
+     */
+    function dd(...$args)
+    {
+        foreach ($args as $x) {
+            var_dump($x);
+        }
+
+        die(1);
+    }
+}
 ?>

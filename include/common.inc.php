@@ -5,7 +5,7 @@ define('HEMA_ROOT', substr(dirname(__FILE__), 0, -7));
 define('MAGIC_QUOTES_GPC', get_magic_quotes_gpc());
 date_default_timezone_set('PRC');
 header("Content-type:text/html;charset=utf-8");
-
+error_reporting(E_ALL);
 require_once HEMA_ROOT . './include/global.func.php';
 
 foreach (array('_COOKIE', '_POST', '_GET') as $_request) {

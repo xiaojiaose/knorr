@@ -20,8 +20,8 @@
     font-weight: 700;
     text-align: center;
     display: block;
-    width: 39%;
-    margin: 0 5%;
+    /*width: 39%;*/
+    margin: 0 0;
 }
 .brand .tab-title > span a{
 	color: #333;
@@ -162,11 +162,16 @@
 .tru_box{
 	/*background: #f2f2f2;*/
 	overflow: hidden;
-	padding: 0px 16px;
+	padding: 10px 0px 10px;
 }
 .tru_box p{
-	line-height: 21px;
+	line-height: 24px;
+	font-size: 14px;
 	margin: 0;
+}
+.tru_box p.title_coun{
+	color: #003f82;
+	font-weight: 700;
 }
 .tru_phone{
 	border-top: 1px solid #d3d3d3;
@@ -208,4 +213,28 @@
 }
 .m-footer-bar a{
     color: #333;
+}
+.earth_box{
+	overflow: hidden;
+}
+.earth_box img{
+	width: 100%;
+}
+.krnon2{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 30px;
+}
+.confirm{
+    width: 35%;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    background: #003f82;
+    margin:auto;
 }
