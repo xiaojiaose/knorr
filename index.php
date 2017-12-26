@@ -23,11 +23,6 @@ $request = ($re = strrchr($_SERVER['REQUEST_URI'], '?'))
     : ($_SERVER['REQUEST_URI'] == '/'
         ? '/index'
         : $_SERVER['REQUEST_URI']);
-//var_dump($request);
-if ($request == 'baidu') {
-    $x = $_GET['x'];
-    $y = $_GET['y'];
-}
 $db = new DBPDO();
 
 include_once HEMA_ROOT . '/templates'.$request.'.php';
