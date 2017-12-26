@@ -76,7 +76,7 @@
                             <p>邮箱：<? echo $province['email'] ?></p>
                         </div>
                         <div class="tru_phone">
-                            <a target="_blank" href="http://<? echo $_SERVER['HTTP_HOST'] ?>/baidu?x=<? echo $province['x_zhou'] ?>&y=<? echo $province['y_zhou'] ?>" class="map_tr">到这里去</a>
+                            <a target="_blank" href="http://<? echo $_SERVER['HTTP_HOST'] ?>/baidu?id=<? echo $province['id'] ?>" class="map_tr">到这里去</a>
                             <a href="tel:<? echo $province['contact_number'] ?>" class="phone_tr">拨打电话</a>
                         </div>
                     </div>
