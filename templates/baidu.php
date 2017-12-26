@@ -64,12 +64,11 @@
         ]
     });
     var marker = new BMap.Marker(poi); //创建marker对象
-    marker.enableDragging(); //marker可拖拽
+    searchInfoWindow.open(marker);
     marker.addEventListener("click", function(e){
         searchInfoWindow.open(marker);
     })
     map.addOverlay(marker); //在地图中添加marker
-
 </script>
 </body>
 </html>
