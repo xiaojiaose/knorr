@@ -1,3 +1,6 @@
+<?php
+$province_names = $db->select("select region_name from region where region_type = 1 order by region_id asc");
+?>
 <!doctype html>
 <html>
 	<head>
@@ -29,7 +32,7 @@
 
 
 
-
+<form name="myfrom" method="post" action="/submit">
 <div class="mobile">
 	<!-- tab -->
 	<div class="qdjmbox">
@@ -43,18 +46,22 @@
 			</div>
 			<div class="qdj_c2">
 				<ul class="ops">
-					<li class="shright"><input type="radio" value="1" name="t1" id="la1" class="input_typea1"/><label class="input_typeb1" for="la1">先生</label></li>
-					<li><input type="radio" value="2" name="t1" id="la2" class="input_typea1"/><label class="input_typeb1" for="la2">女士</label></li>
+					<li class="shright">
+                        <input type="radio" value="1" name="sex" id="la1" checked class="input_typea1"/><label class="input_typeb1" for="la1">先生</label></li>
+					<li>
+                        <input type="radio" value="2" name="sex" id="la2" class="input_typea1"/><label class="input_typeb1" for="la2">女士</label></li>
 				</ul> 
 			</div>
 		</div>
 		<div class="qdj_a" style="height: 128px; background: #ebebeb">
-            <textarea id="contentzx" name="contentzx" style="height: 128px" cols="" rows="" class="input_txt" placeholder="您想咨询的内容（5-100个字以内）" onkeyup="checkContentNum()"></textarea>
+            <textarea id="contentzx" name="content" style="height: 128px" cols="" rows="" class="input_txt" placeholder="您想咨询的内容（5-100个字以内）" onkeyup="checkContentNum()"></textarea>
 		</div>
 		<div class="qdj_d">
 			<select name="city" id="city">
-				<option value="0">所在省份</option>
-				<option value="1">全国</option>
+                <option value="">所在省份</option>
+                <? foreach ($province_names as $name) {?>
+                    <option value="<? echo $name['region_name'] ?>"><? echo $name['region_name'] ?></option>
+                <? } ?>
 			</select>
 			<i></i>
 		</div>
@@ -64,20 +71,25 @@
 		<div class="qdj_f">
 			<input type="text" class="text350" maxlength="40" name="email" id="email" placeholder="邮箱">
 		</div>
+        <input type="hidden" name="type" value="consult">
 		<div class="sub_tab">
             <div class="pcloginbtnbox">
-                <a href="#" class="chengse">提交</a>
+                <button class="chengse" type="submit">提交</button>
             </div>
         </div>
 	</div>
 	
 	
-</div>	
+</div>
+</form>
 <!--底部-->
 <footer class="m-footer-bar">
 	<p class="copyright">&copy;
         <script>
             document.write(new Date().getFullYear());
+            function checkContentNum() {
+
+            }
         </script>
         <a href="#">Knorr-Bremse AG | www.knorr-bremse.com.cn</a>
     </p>

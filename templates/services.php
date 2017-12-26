@@ -14,8 +14,8 @@
 	</head>
 <body>
 <header>
-	<h1><a href="#">克诺尔</a></h1>
-	<a href="#" class="logo" rel="nofollow">
+	<h1><a href="/">克诺尔</a></h1>
+	<a href="/" class="logo" rel="nofollow">
 		<img src="/templates/images/icon1.png" onerror="this.onerror=null;this.src='../images/icon1.png'" id="loginSrc">
 	</a>	
 </header>
@@ -34,9 +34,9 @@
 	<div class="tabdiv">
 		<a href="#" class="tabdiv1"><span>产品查询</span></a>
 		<a href="#" class="tabdiv2"><span>热销产品</span></a>
-		<a href="#" class="tabdiv3"><span>渠道加盟</span></a>
+		<a href="channel" class="tabdiv3"><span>渠道加盟</span></a>
 		<a href="#" class="tabdiv4"><span>在线培训</span></a>
-		<a href="#" class="tabdiv5"><span>服务咨询</span></a>		
+		<a href="consult" class="tabdiv5"><span>服务咨询</span></a>
 	</div>	
 </div>	
 <!--底部-->
