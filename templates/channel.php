@@ -61,7 +61,7 @@ $province_names = $db->select("select region_name from region where region_type 
             <div class="qdj_c2">
                 <ul class="ops">
                     <li class="shright">
-                        <input type="radio" value="1" name="sex" id="la1" class="input_typea1"/><label
+                        <input type="radio" value="1" name="sex" checked id="la1" class="input_typea1"/><label
                                 class="input_typeb1" for="la1">先生</label>
                     </li>
                     <li>
