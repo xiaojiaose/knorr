@@ -23,7 +23,7 @@ if ($sql && $db->insert($sql)) {
 }
 
 if ($continue) {
-    echo "<script>location.href='/redirect/{$type}'</script>";
+    echo "<script>location.href='/redirect?type={$type}'</script>";
 } else {
     echo 'failed';
 }
