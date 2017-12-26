@@ -1,27 +1,27 @@
 .brand {
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid #e3e3e3;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px solid #e3e3e3;
 }
 .brand .tab-title {
-    font-size: 14px;
-    padding: 0 16px;
-    height: 41px;
-    border-bottom: 1px solid #eee;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+	font-size: 14px;
+	padding: 0 16px;
+	height: 41px;
+	border-bottom: 1px solid #eee;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 .brand .tab-title > span {
-    font-size: 16px;
-    color: #A1A9B3;
-    line-height: 40px;
-    height: 41px;
-    font-weight: 700;
-    text-align: center;
-    display: block;
-    width: 39%;
-    margin: 0 5%;
+	font-size: 16px;
+	color: #A1A9B3;
+	line-height: 40px;
+	height: 41px;
+	font-weight: 700;
+	text-align: center;
+	display: block;
+	width: 39%;
+	margin: 0 5%;
 }
 .brand .tab-title > span a{
 	color: #333;
@@ -29,7 +29,7 @@
 	width: 100%;
 }
 .brand .tab-title .selected {
-    color: #003f82;
+	color: #003f82;
 }
 .brand .tab-title em{
 	width: 1px; height: 20px;
@@ -40,26 +40,26 @@
 	float: left;
 }
 .brand .tabs-slider {
-    -webkit-transform: translate3d(15px,0,0);
-    transform: translate3d(15px,0,0);
-    position: absolute;
-    left: 0;
-    top: 41px;
-    z-index: 1;
-    height: 1px;
-    background-color: #003f82;
-    -webkit-transition: -webkit-transform .2s linear 0s;
-    transition: -webkit-transform .2s linear 0s;
-    transition: transform .2s linear 0s;
-    transition: transform .2s linear 0s, -webkit-transform .2s linear 0s;
+	-webkit-transform: translate3d(15px,0,0);
+	transform: translate3d(15px,0,0);
+	position: absolute;
+	left: 0;
+	top: 41px;
+	z-index: 1;
+	height: 1px;
+	background-color: #003f82;
+	-webkit-transition: -webkit-transform .2s linear 0s;
+	transition: -webkit-transform .2s linear 0s;
+	transition: transform .2s linear 0s;
+	transition: transform .2s linear 0s, -webkit-transform .2s linear 0s;
 }
 .mobile {
-    display: block;
-    overflow: hidden;
-    min-height: 400px;
-    /*padding-bottom: 45px;*/
-    perspective: 1px; 
-    /*padding: 0; height: calc(100vh - 300px); overflow: auto;*/
+	display: block;
+	overflow: hidden;
+	min-height: 400px;
+	/*padding-bottom: 45px;*/
+	perspective: 1px;
+	/*padding: 0; height: calc(100vh - 300px); overflow: auto;*/
 }
 
 
@@ -80,7 +80,7 @@
 .selectedbox{
 	overflow: hidden;
 	width: 100%;
-	margin-bottom: 4px;	
+	margin-bottom: 4px;
 }
 .selectinput{
 	width: 71%;
@@ -113,10 +113,15 @@
 	background: #003f82;
 }
 .selectinputip input{
+	-webkit-appearance: none;
+	-o-border-image: none;
+	border-image: none;
+	border-radius: 0;
+	border: 0 none;
 	width: 100%;
 	height: 44px;
 	background: none;
-    border: none;
+	border: none;
 	background: #003f82;
 	text-align: center;
 	line-height: 44px;
@@ -139,7 +144,7 @@
 	text-indent: 16px;
 	position: relative;
 	width: 100%;
-	
+
 }
 .tru_tip_a .down{
 	position: absolute;
@@ -172,7 +177,7 @@
 	border-top: 1px solid #d3d3d3;
 	border-bottom: 1px solid #d3d3d3;
 	overflow: hidden;
-	
+
 }
 .phone_tr{
 	width: 94px;
@@ -201,11 +206,11 @@
 	border-bottom: 1px solid #003f82;
 }
 .m-footer-bar{
-    color: #333;
+	color: #333;
 }
 .m-footer-bar .copyright{
-    color: #333;
+	color: #333;
 }
 .m-footer-bar a{
-    color: #333;
+	color: #333;
 }
