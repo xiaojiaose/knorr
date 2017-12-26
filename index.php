@@ -20,10 +20,20 @@ require_once HEMA_ROOT . '/include/db_mysql.class.php';
 $datetime = time();
 
 $back_url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-//var_dump($back_url);
+
+$request = ($re = strrchr($_SERVER['REQUEST_URI'], '?'))
+    ? str_replace($re, "", $_SERVER['REQUEST_URI'])
+    : ($_SERVER['REQUEST_URI'] == '/'
+        ? '/index'
+        : $_SERVER['REQUEST_URI']);
+//var_dump($request);
+if ($request == 'baidu') {
+    $x = $_GET['x'];
+    $y = $_GET['y'];
+}
 $db = new DBPDO();
 
-include_once HEMA_ROOT . '/templates'.$_SERVER['REQUEST_URI'].'.php';
+include_once HEMA_ROOT . '/templates'.$request.'.php';
 
 
 

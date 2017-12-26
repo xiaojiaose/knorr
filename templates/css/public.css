@@ -130,7 +130,8 @@ body > header > .logo img {
 
 
 .m-footer-bar {
-    padding: 15px 0 20px;
+    position: absolute;
+    padding: 0px 0 0px;
     overflow: hidden;
     bottom: 0;
     left: 0;
@@ -142,9 +143,15 @@ body > header > .logo img {
     line-height: 30px;
     text-align: center;
 }
-
-
-
+.mobile{
+    padding-bottom: 60px;
+}
+.brand{
+    background: #fff;
+}
+header{
+    background: #fff;
+}
 
 
 

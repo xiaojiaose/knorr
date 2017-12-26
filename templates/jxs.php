@@ -29,6 +29,18 @@
 </div>
 
 <div class="mobile">
+	<style>
+		.show {
+			display: block !important;
+		}
+		.hidden {
+			display: none !important;
+		}
+		.invisible {
+			visibility: hidden;
+		}
+
+	</style>
 	<!-- tab -->
 	<div class="jxsbox">
 		<div class="wdmox">
@@ -64,8 +76,8 @@
                             <p>邮箱：<? echo $province['email'] ?></p>
                         </div>
                         <div class="tru_phone">
-                            <a href="" class="map_tr">到这里去</a>
-                            <a href="" class="phone_tr">拨打电话</a>
+                            <a target="_blank" href="http://<? echo $_SERVER['HTTP_HOST'] ?>/baidu?x=<? echo $province['x_zhou'] ?>&y=<? echo $province['y_zhou'] ?>" class="map_tr">到这里去</a>
+                            <a href="tel:<? echo $province['contact_number'] ?>" class="phone_tr">拨打电话</a>
                         </div>
                     </div>
 				</div>
@@ -96,8 +108,8 @@
         // 经销商打开展示
         $(".tru_tip_a").click(function () {
             $province = $('#selectprovince').val();
-            $(this).parent('.' + $province).find('.tru_tip_a i').addClass('down');
-            $(this).parent('.' + $province).find('.tru_tip_div').addClass('hidden');
+            $(this).parent().parent().find('.tru_tip_a i').addClass('down');
+            $(this).parent().parent().find('.tru_tip_div').addClass('hidden');
 
             $(this).removeClass('down').addClass('up');
             $(this).parent().find('.tru_tip_div').removeClass('hidden').addClass('show');
