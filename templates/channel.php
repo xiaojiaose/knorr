@@ -34,7 +34,7 @@ $province_names = $db->select("select region_name from region where region_type 
     </div>
 </div>
 
-<form name="myfrom" method="post" action="/submit">
+<form name="myfrom" method="post" action="/submit"  onsubmit="return verify(1)">
 <div class="mobile">
     <!-- tab -->
     <div class="qdjmbox">
@@ -97,6 +97,43 @@ $province_names = $db->select("select region_name from region where region_type 
 
 </div>
 </form>
+<script>
+    function verify(a) {
+        var name = $("#name").val();
+        var mobile = $("#mobile").val();
+        var compay = $("#product").val();
+        var email = $("#email").val();
+        var city = $("#city").val(); // || compay|| gzhangye || cshangye || city
+
+        if (!compay) {
+            alert('请选择意向代理产品');
+            return false;
+        }
+        if (!name) {
+            alert('请输入姓名');
+            return false;
+        }
+        if (!city) {
+            alert('请输入所在城市');
+            return false;
+        }
+
+        //手机号正则
+        var phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/;
+        if (!phoneReg.test(mobile)) {
+            alert('请输入有效的手机号码！');
+            return false;
+        }
+
+        var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+        if (!re.test(email)) {
+            alert("请输入有效的邮箱");
+            return false;
+        }
+
+    }
+
+</script>
 <!--底部-->
 <?php
 include_once 'footer.html';
