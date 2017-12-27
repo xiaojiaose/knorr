@@ -19,7 +19,7 @@ $datetime = time();
 $back_url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 $request = ($re = strrchr($_SERVER['REQUEST_URI'], '?'))
-    ? str_replace($re, "", $_SERVER['REQUEST_URI'])
+    ? (str_replace($re, "", $_SERVER['REQUEST_URI']) == '/' ? '/index' : str_replace($re, "", $_SERVER['REQUEST_URI']))
     : ($_SERVER['REQUEST_URI'] == '/'
         ? '/index'
         : $_SERVER['REQUEST_URI']);
