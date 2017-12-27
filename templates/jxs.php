@@ -71,7 +71,15 @@
                     <div class="tru_tip_div hidden">
                         <div class="tru_box">
                             <p><? echo $province['en_name'] ?></p>
-                            <p>区域：<? echo $province['province'] . $province['city'] ?></p>
+                            <p>区域：
+                                <?
+                                if ($province['province'] == $province['city']) {
+                                    echo $province['province'] . '市';
+                                } else {
+                                    echo $province['province'] . $province['city'];
+                                }
+                                ?>
+                            </p>
                             <p>电话：<? echo $province['contact_number'] ?></p>
                             <p>邮箱：<? echo $province['email'] ?></p>
                         </div>
