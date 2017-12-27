@@ -35,7 +35,7 @@
 	<div class="tabdiv">
 		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/cpcx" class="tabdiv1"><span>产品查询</span></a>
 		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/product" class="tabdiv2"><span>热销产品</span></a>
-		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/channel" class="tabdiv3"><span>渠道加盟</span></a>
+		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/jieguo1" class="tabdiv3"><span>渠道加盟</span></a>
 		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/jieguo3" class="tabdiv4"><span>在线培训</span></a>
 		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/consult" class="tabdiv5"><span>服务咨询</span></a>
 		<a href="http://<? echo $_SERVER['HTTP_HOST'] ?>/jxs" class="tabdiv6"><span>经销商网点</span></a>

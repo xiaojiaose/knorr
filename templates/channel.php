@@ -49,6 +49,7 @@ $province_names = $db->select("select region_name from region where region_type 
                 <option value="挂车系统">挂车系统</option>
                 <option value="售后服务系统">售后服务系统</option>
             </select>
+            <i></i>
         </div>
 
         <div class="qdj_b">
