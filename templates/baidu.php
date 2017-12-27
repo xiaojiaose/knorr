@@ -58,18 +58,17 @@
         panel  : "panel",         //检索结果面板
         enableAutoPan : true,     //自动平移
         searchTypes   :[
-            BMAPLIB_TAB_SEARCH,   //周边检索
             BMAPLIB_TAB_TO_HERE,  //到这里去
+            BMAPLIB_TAB_SEARCH,   //周边检索
             BMAPLIB_TAB_FROM_HERE //从这里出发
         ]
     });
     var marker = new BMap.Marker(poi); //创建marker对象
-    marker.enableDragging(); //marker可拖拽
+    searchInfoWindow.open(marker);
     marker.addEventListener("click", function(e){
         searchInfoWindow.open(marker);
     })
     map.addOverlay(marker); //在地图中添加marker
-
 </script>
 </body>
 </html>
