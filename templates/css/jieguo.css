@@ -28,6 +28,10 @@
 	display: block;
 	width: 100%;
 }
+.brand .tab-title > span.onlinex{
+    width: auto;
+    margin: 0 0;
+}
 .brand .tab-title .selected {
     color: #003f82;
 }

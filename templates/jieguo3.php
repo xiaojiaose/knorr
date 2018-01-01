@@ -22,16 +22,10 @@
 </header>
 
 <div class="brand">
-	<div class="tab-title">
-		<span class="selected"><a href="">经销商网点</a></span>
-		<em></em>		
-		<span class="selected bluetom">渠道加盟</span>
-		
-	</div>
+    <div class="tab-title">
+        <span class="selected bluetom onlinex">在线培训</span>
+    </div>
 </div>
-
-
-
 
 <div class="mobile">
 	<div class="kunonbox">
