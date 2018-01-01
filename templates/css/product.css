@@ -92,14 +92,15 @@ body{
 	overflow: hidden;
 	float: left;
 	background: #fff;
-	height: 160px;
+	height: 196px;
 	text-align: center;
-	/*vertical-align:middle;*/
+	vertical-align:middle;
+	line-height:196px;
 }
 .product_box1 img{
 	
 	width: 86%;
-	margin-top:16px ;
+	margin-top:0px ;
 	display: inline-block; vertical-align: middle;
 }
 .product_box2{
@@ -108,7 +109,7 @@ body{
 	overflow: hidden;
 	float: left;
 	background: #fff;
-	height: 160px;
+	height: 196px;
 }
 
 
@@ -132,6 +133,9 @@ body{
 	padding: 0px 15px;
 	font-size: 10px;
 	color: #666666;
+	line-height: 20px;
+	height: 100px;
+	overflow: hidden;
 }
 .product_input{
 	padding: 10px 15px 0px;
